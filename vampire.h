@@ -7,22 +7,21 @@ private:
     double _damage;
     double _perk_chance;    
     std::mt19937 rand_gen;
-    
+    std::uniform_real_distribution<double>  dis;
 
 public:
-    Vampire(): _hp(689.0), _armor(3.25), _damage(3.25), _perk_chance(), rand_gen(){
-        std::uniform_real_distribution<double>  dis(5.0,35.0);
-        _perk_chance = dis(rand_gen);
-    }
+    Vampire(): _hp(689.0), _armor(3.25), _damage(3.25), _perk_chance(35.0), rand_gen(), dis(5.0,100.0){}
     ~Vampire() = default;
+    
+    void dead();
 
     bool is_alive();
 
     double get_hp();
 
-    void receive_damage(double input_damage);
+    double receive_damage(double input_damage);
 
-    void attack(Vampire enemy);
+    double attack(Vampire enemy);
 
-    void ultimate(Vampire enemy);
+    double ultimate(Vampire enemy);
 };
