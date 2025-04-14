@@ -5,7 +5,6 @@ void Vampire::dead(){
     _armor = 0;
     _damage = 0;
 }
-
 double Vampire::get_hp(){
     return _hp;
 }
@@ -31,9 +30,18 @@ double Vampire::attack(Vampire enemy){
     if(dis(rand_gen) <=_perk_chance){
         damage *= 2;
     }
+    return enemy.receive_damage(damage);
     
 }
 
 double Vampire::ultimate(Vampire enemy){
+    double damage = _damage*1.5;
+    if (dis(rand_gen) <= _perk_chance) {
+        damage *= 2;
+    }
+
+    damage = enemy.receive_damage(damage);
+    _hp += damage / 2;
+    return damage;
 
 }

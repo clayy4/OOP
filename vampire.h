@@ -1,3 +1,6 @@
+#ifndef VAMPIRE_H
+#define VAMPIRE_H
+
 #include <random>
 
 class Vampire{
@@ -10,7 +13,7 @@ private:
     std::uniform_real_distribution<double>  dis;
 
 public:
-    Vampire(): _hp(689.0), _armor(3.25), _damage(3.25), _perk_chance(35.0), rand_gen(), dis(5.0,100.0){}
+    Vampire(): _hp(689.0), _armor(3.25), _damage(3.25), _perk_chance(35.0), rand_gen(), dis(0.0,100.0){}
     ~Vampire() = default;
     
     void dead();
@@ -25,3 +28,5 @@ public:
 
     double ultimate(Vampire enemy);
 };
+
+#endif VAMPIRE_H
