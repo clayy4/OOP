@@ -25,7 +25,7 @@ double Vampire::receive_damage(double input_damage){
 
 }
 
-double Vampire::attack(Vampire enemy){
+double Vampire::attack(Vampire& enemy){
     double damage = _damage;
     if(dis(rand_gen) <=_perk_chance){
         damage *= 2;
@@ -34,7 +34,7 @@ double Vampire::attack(Vampire enemy){
     
 }
 
-double Vampire::ultimate(Vampire enemy){
+double Vampire::ultimate(Vampire& enemy){
     double damage = _damage*1.5;
     if (dis(rand_gen) <= _perk_chance) {
         damage *= 2;

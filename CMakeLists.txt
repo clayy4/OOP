@@ -5,7 +5,7 @@
  set(CMAKE_CXX_STANDARD 20)
  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
- add_executable(${PROJECT_NAME} "main.cpp"  "vampire.cpp" "game.h" "game.cpp")
+ add_executable(${PROJECT_NAME} "main.cpp"  "vampire.cpp" "game.cpp")
 
  if(CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang" OR
     CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR

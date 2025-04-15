@@ -13,7 +13,7 @@ private:
     std::uniform_real_distribution<double>  dis;
 
 public:
-    Vampire(): _hp(689.0), _armor(3.25), _damage(3.25), _perk_chance(35.0), rand_gen(), dis(0.0,100.0){}
+    Vampire(): _hp(689.0), _armor(3.25), _damage(60.25), _perk_chance(35.0), rand_gen(std::random_device{}()), dis(0.0, 100.0) {}
     ~Vampire() = default;
     
     void dead();
@@ -24,9 +24,9 @@ public:
 
     double receive_damage(double input_damage);
 
-    double attack(Vampire enemy);
+    double attack(Vampire& enemy);
 
-    double ultimate(Vampire enemy);
+    double ultimate(Vampire& enemy);
 };
 
-#endif VAMPIRE_H
+#endif

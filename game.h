@@ -3,6 +3,7 @@
 
 #include "vampire.h"
 #include <string>
+#include <random>
 #include <iostream>
 
 int correct_input(int MIN, int MAX);
@@ -13,7 +14,7 @@ void game_info();
 
 void game_settings(int& game_mode, std::string& vampire1_name, std::string& vampire2_name);
 
-void game_simulation(int& game_mode, std::string& vampire1_name, std::string& vampire2_name);
+void game_simulation(std::string& vampire1_name, std::string& vampire2_name);
 
 
 #endif GAME_H

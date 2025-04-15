@@ -7,6 +7,7 @@ void intro() {
 }
 
 int main(){
+    std::ios_base::sync_with_stdio(false);
     intro();
     int game_mode = 0;
     int choose = 0;
@@ -27,7 +28,7 @@ int main(){
             break;
         }
         case(3): {
-            game_simulation(game_mode, vampire1_name, vampire2_name);
+            game_simulation(vampire1_name, vampire2_name);
             break;
         }
         default:
@@ -36,6 +37,6 @@ int main(){
         }
     } while (choose != 4);
 
-
+    
     return 0;
 }
