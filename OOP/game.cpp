@@ -4,7 +4,7 @@
 int correct_input(int MIN, int MAX) {
     int input;
     std::cin >> input;
-    while (input <= MIN && input >= MAX){
+    while ((input < MIN) || (input > MAX)) {
         std::cout << "\nВвод некоректный\n"
             << "Попробуйте еще раз: ";
         std::cin >> input;

@@ -4,8 +4,14 @@
 
  set(CMAKE_CXX_STANDARD 20)
  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ 
+add_library(VAMPIRE "library/vampire.cpp")
 
- add_executable(${PROJECT_NAME} "main.cpp"  "vampire.cpp" "game.cpp")
+add_executable(${PROJECT_NAME} "main.cpp" "game.cpp")
+
+target_link_libraries(${PROJECT_NAME} VAMPIRE)
+target_include_directories(${PROJECT_NAME} PUBLIC  ${CMAKE_CURRENT_SOURCE_DIR}/library)
+
 
  if(CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang" OR
     CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR
