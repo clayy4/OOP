@@ -3,11 +3,13 @@
 
 int correct_input(int MIN, int MAX) {
     int input;
-    std::cin >> input;
-    while ((input < MIN) || (input > MAX)) {
+ 
+    while (!(std::cin >> input) || (input < MIN) || (input > MAX)) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cout << "\nВвод некоректный\n"
             << "Попробуйте еще раз: ";
-        std::cin >> input;
+        
     } 
     return input;
 }
@@ -77,6 +79,7 @@ void game_simulation(std::string& vampire1_name, std::string& vampire2_name) {
             damage = vampire2.attack(vampire1);
             std::cout << vampire2_name << " нанёс атакой " << vampire1_name << " " << damage << '\n';
         }
+
         else if (vampire2.is_alive() && which_attack > 70) {
             damage = vampire2.ultimate(vampire1);
             std::cout << vampire2_name << " нанёс особым умением " << vampire1_name << " " << damage << '\n';
