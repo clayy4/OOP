@@ -1,0 +1,77 @@
+\doxysection{Dice Class Reference}
+\hypertarget{class_dice}{}\label{class_dice}\index{Dice@{Dice}}
+
+
+Класс для генерации случайных чисел с плавающей точкой.  
+
+
+
+
+{\ttfamily \#include $<$dice.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dice_a898cd5b1af808873efac3d979645e775}{Dice}} ()=default
+\begin{DoxyCompactList}\small\item\em Распределение для генерации чисел \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dice_a8be53f29fb647b3c4a3d04b3f4a643b8}{Dice}} (const int min, const int max)
+\begin{DoxyCompactList}\small\item\em Конструктор с указанием диапазона генерации. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dice_a612a16c434160895563d19099ca0b33b}{roll}} ()
+\begin{DoxyCompactList}\small\item\em Генерация случайного числа. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для генерации случайных чисел с плавающей точкой. 
+
+Использует стандартный генератор псевдослучайных чисел Mersenne Twister ({\ttfamily std\+::mt19937}) и равномерное распределение в заданном диапазоне. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_dice_a898cd5b1af808873efac3d979645e775}\index{Dice@{Dice}!Dice@{Dice}}
+\index{Dice@{Dice}!Dice@{Dice}}
+\doxysubsubsection{\texorpdfstring{Dice()}{Dice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_dice_a898cd5b1af808873efac3d979645e775} 
+Dice\+::\+Dice (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Распределение для генерации чисел 
+
+Конструктор по умолчанию. Устанавливает диапазон от 0.\+0 до 100.\+0. \Hypertarget{class_dice_a8be53f29fb647b3c4a3d04b3f4a643b8}\index{Dice@{Dice}!Dice@{Dice}}
+\index{Dice@{Dice}!Dice@{Dice}}
+\doxysubsubsection{\texorpdfstring{Dice()}{Dice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_dice_a8be53f29fb647b3c4a3d04b3f4a643b8} 
+Dice\+::\+Dice (\begin{DoxyParamCaption}\item[{const int}]{min}{, }\item[{const int}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор с указанием диапазона генерации. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Минимальное значение диапазона \\
+\hline
+{\em max} & Максимальное значение диапазона \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_dice_a612a16c434160895563d19099ca0b33b}\index{Dice@{Dice}!roll@{roll}}
+\index{roll@{roll}!Dice@{Dice}}
+\doxysubsubsection{\texorpdfstring{roll()}{roll()}}
+{\footnotesize\ttfamily \label{class_dice_a612a16c434160895563d19099ca0b33b} 
+int Dice\+::roll (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Генерация случайного числа. 
+
+\begin{DoxyReturn}{Returns}
+Случайное число в заданном диапазоне (включительно) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/cpp/\+LAB5/library/\mbox{\hyperlink{dice_8h}{dice.\+h}}\item 
+C\+:/cpp/\+LAB5/library/dice.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\doxysection{game.\+h}
+\hypertarget{game_8h_source}{}\label{game_8h_source}\index{C:/cpp/LAB5/library/game.h@{C:/cpp/LAB5/library/game.h}}
+\mbox{\hyperlink{game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ GAME\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ GAME\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{character_8h}{../Characters/character.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{assasin_8h}{../Characters/assasin.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{paladin_8h}{../Characters/paladin.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gunslinger_8h}{../Characters/gunslinger.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vampire_8h}{../Characters/vampire.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dice_8h}{dice.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <format>}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_wrap_character_a155e24b2a7072bc45610d267026c5556}{WrapCharacter}}\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<Character>\ \mbox{\hyperlink{struct_wrap_character_a036d10f1bb291069b662afaada86f82a}{CHARACTER}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_wrap_character_a9bcf14eba8c17ec8df724aea7076d4c2}{HP}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_wrap_character_ab45f1dcf05dbbe731e6ff6b00d4b9128}{ARMOR}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_wrap_character_a3402acff914e7f4b51cfe125feeb7748}{DAMAGE}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_wrap_character_a07f8158f373722dc160b1f6da1174f03}{PERK\_CHANCE}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_wrap_character_ab75ba66c85097fc5634f7bfe6ec99478}{ULTIMATE\_CHANCE}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{struct_wrap_character_a155e24b2a7072bc45610d267026c5556}{WrapCharacter}}(\textcolor{keyword}{const}\ std::shared\_ptr<Character>\ character):}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_wrap_character_a036d10f1bb291069b662afaada86f82a}{CHARACTER}}(character),\ \ \mbox{\hyperlink{struct_wrap_character_a9bcf14eba8c17ec8df724aea7076d4c2}{HP}}(character-\/>get\_hp()),\ \mbox{\hyperlink{struct_wrap_character_ab45f1dcf05dbbe731e6ff6b00d4b9128}{ARMOR}}(character-\/>get\_armor()),\ \mbox{\hyperlink{struct_wrap_character_a3402acff914e7f4b51cfe125feeb7748}{DAMAGE}}(character-\/>get\_damage()),}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_wrap_character_a07f8158f373722dc160b1f6da1174f03}{PERK\_CHANCE}}(character-\/>get\_perk\_chance()),\ \mbox{\hyperlink{struct_wrap_character_ab75ba66c85097fc5634f7bfe6ec99478}{ULTIMATE\_CHANCE}}(character-\/>get\_ultimate\_chance())\{\}}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_dice}{Dice}}\ \_dice;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ std::shared\_ptr<Character>\ \_character1;\ }
+\DoxyCodeLine{00052\ \ \ \ \ std::shared\_ptr<Character>\ \_character2;\ }
+\DoxyCodeLine{00053\ \ \ \ \ std::vector<std::string>\ \_menu;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ std::vector<std::string>\ \_info;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ std::vector<WrapCharacter>\ \_characters;\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ character\_reset(std::shared\_ptr<Character>\&\ character);}
+\DoxyCodeLine{00062\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}():\ \_dice(0,100)\{\}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_dice}{Dice}}\&\ \mbox{\hyperlink{class_game_a01ce03b389f146e0ce27b6e84577c06b}{get\_dice}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a82c384a06d85f81376bb4febbb583817}{add\_character}}(\mbox{\hyperlink{struct_wrap_character}{WrapCharacter}}\ wrcharacter);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a9b5e63f0442225aa69d205f1e3130858}{add\_menu\_item}}(\textcolor{keyword}{const}\ std::string\&\ item);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_ad9328d7b6c26b1b2f9f7bc6252ccfd7e}{print\_menu}}()\ noexcept;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a2b84f35b6e26012536aa221777937938}{add\_info\_item}}(const\ std::\textcolor{keywordtype}{string}\&\ item);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_af102a22de7be0a2b1de8d4120f863899}{print\_info}}()\ noexcept;}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_character}{Character}}>\ \mbox{\hyperlink{class_game_ae3970017b663e8ab196a48ec8fb62f9b}{create\_character}}(const\ \textcolor{keywordtype}{int}\ choose,\ const\ std::\textcolor{keywordtype}{string}\ name);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_aa2df9aeba3f9ac06019f17fb8a916301}{settings}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a38a3ca94038b719602570253ef5b9228}{random\_settings}}(const\ std::vector<std::\textcolor{keywordtype}{string}>\&\ vec\_names);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a5d7985ac95daa81983e7b897bf7b68b1}{act}}(std::shared\_ptr<\mbox{\hyperlink{class_character}{Character}}>\ attacker,\ std::shared\_ptr<\mbox{\hyperlink{class_character}{Character}}>\ defender);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_af9e3f4b90c2ea571cdf07607d2d99e46}{statistic}}(const\ \textcolor{keywordtype}{int}\ move);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00139\ \ \ \ \ std::\textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_game_a206ed958e87781aae2ae47d5fad6e6f2}{simulation}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_aabe260b13403493f6f76d1d1fcb3e623}{run}}(const\ std::vector<std::\textcolor{keywordtype}{string}>\&\ vec\_names);}
+\DoxyCodeLine{00146\ \};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00154\ \textcolor{keywordtype}{int}\ correct\_input(const\ \textcolor{keywordtype}{int}\ MIN,\ const\ \textcolor{keywordtype}{int}\ MAX);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

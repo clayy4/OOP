@@ -1,0 +1,188 @@
+\doxysection{Paladin Class Reference}
+\hypertarget{class_paladin}{}\label{class_paladin}\index{Paladin@{Paladin}}
+
+
+Класс паладина, наследующий от \doxylink{class_character}{Character}.  
+
+
+
+
+{\ttfamily \#include $<$paladin.\+h$>$}
+
+Inheritance diagram for Paladin\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_paladin}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_paladin_a2427c8fbde4ad9560d50c26a3dc6169a}{Paladin}} (const std\+::string name, const double hp, const double armor, const double damage, const double perk\+\_\+chance, const double ultimate\+\_\+chance, const \mbox{\hyperlink{class_dice}{Dice}} dice)
+\begin{DoxyCompactList}\small\item\em Конструктор паладина. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_paladin_a3d31d799cd0fa8ff61bb8a9092ac829b}{get\+\_\+class}} () const override
+\begin{DoxyCompactList}\small\item\em Получить наименование класса. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_paladin_ab0847c4ee5738a378b075391aadd185d}{receive\+\_\+damage}} (double input\+\_\+damage) override
+\begin{DoxyCompactList}\small\item\em Метод для получения урона паладином. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_paladin_ae3976506b4de8c50fea8e5b005f74bad}{attack}} () override
+\begin{DoxyCompactList}\small\item\em Метод для атаки паладином по противнику. Паладин наносит базовый урон противнику. Если паладин использует благословение, оно деактивируется после атаки и обновляются его параметры. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_paladin_a3ef510b94a14297bf8ab1d121d90ee8b}{ultimate}} () override
+\begin{DoxyCompactList}\small\item\em Метод для использования ультимативной способности паладином. Ультимативная способность паладина даёт шанс на активацию благословения, которое усиливает его характеристики. После активации ультимейта паладин наносит базовый урон противнику. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_character}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Character} (const \mbox{\hyperlink{class_character}{Character}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Удалённый конструктор копирования. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_character}{Character}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_character}{Character}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Удалённый оператор присваивания. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Character} ()=default
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_character_a3b2207476b51204674b9cce4721ca280}{Character}} (const std\+::string name, const double hp, const double armor, const double damage, const double perk\+\_\+chance, const double ultimate\+\_\+chance, const \mbox{\hyperlink{class_dice}{Dice}} dice)
+\begin{DoxyCompactList}\small\item\em Конструктор с параметрами. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_character_a9e5385baeac04e3db441f20033071cc8}{is\+\_\+alive}} ()
+\begin{DoxyCompactList}\small\item\em Проверка, жив ли персонаж. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_character_aed36e2c0d5587fb7800ddd1c98bf216e}{get\+\_\+hp}} () const
+\begin{DoxyCompactList}\small\item\em Получить текущее здоровье персонажа. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_character_ab72b3bd9366571392ac6789f0f90dbeb}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Получить имя персонажа. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_character_a162aadde35b76c318ab2b114c02792d3}{get\+\_\+damage}} () const
+\begin{DoxyCompactList}\small\item\em Получить урон персонажа. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_character_a2e00ae2e8bc8f2e10a943c782184eef9}{get\+\_\+armor}} () const
+\begin{DoxyCompactList}\small\item\em Получить значение брони. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_character_a3ebd1ced348eb83792e1355690d6f19c}{get\+\_\+perk\+\_\+chance}} () const
+\begin{DoxyCompactList}\small\item\em Получить шанс срабатывания перка. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_character_ad411caefc9b85ba23e6bb2cb2ff5a7be}{get\+\_\+ultimate\+\_\+chance}} () const
+\begin{DoxyCompactList}\small\item\em Получить шанс ультимативной способности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_character}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+\_\+hp} (double new\+\_\+hp)
+\begin{DoxyCompactList}\small\item\em Установить значение здоровья \end{DoxyCompactList}\item 
+void {\bfseries set\+\_\+armor} (double new\+\_\+armor)
+\begin{DoxyCompactList}\small\item\em Установить значение брони \end{DoxyCompactList}\item 
+void {\bfseries set\+\_\+damage} (double new\+\_\+damage)
+\begin{DoxyCompactList}\small\item\em Установить значение урона \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_character}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dice}{Dice}} {\bfseries \+\_\+dice}
+\begin{DoxyCompactList}\small\item\em Кубик для вероятностных действий \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс паладина, наследующий от \doxylink{class_character}{Character}. 
+
+Класс паладина включает в себя методы для получения урона, атаки и ультимативной способности, а также уникальные перки, такие как благословение, которое улучшает броню и урон, а также шанс на снижение урона. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_paladin_a2427c8fbde4ad9560d50c26a3dc6169a}\index{Paladin@{Paladin}!Paladin@{Paladin}}
+\index{Paladin@{Paladin}!Paladin@{Paladin}}
+\doxysubsubsection{\texorpdfstring{Paladin()}{Paladin()}}
+{\footnotesize\ttfamily \label{class_paladin_a2427c8fbde4ad9560d50c26a3dc6169a} 
+Paladin\+::\+Paladin (\begin{DoxyParamCaption}\item[{const std\+::string}]{name}{, }\item[{const double}]{hp}{, }\item[{const double}]{armor}{, }\item[{const double}]{damage}{, }\item[{const double}]{perk\+\_\+chance}{, }\item[{const double}]{ultimate\+\_\+chance}{, }\item[{const \mbox{\hyperlink{class_dice}{Dice}}}]{dice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор паладина. 
+
+Создаёт объект паладина с заданными параметрами.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Имя паладина \\
+\hline
+{\em hp} & Здоровье паладина \\
+\hline
+{\em armor} & Броня паладина \\
+\hline
+{\em damage} & Базовый урон паладина \\
+\hline
+{\em perk\+\_\+chance} & Шанс на активацию перка \\
+\hline
+{\em ultimate\+\_\+chance} & Шанс на активацию ультимативной способности \\
+\hline
+{\em dice} & Кубик для расчета вероятностей \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_paladin_ae3976506b4de8c50fea8e5b005f74bad}\index{Paladin@{Paladin}!attack@{attack}}
+\index{attack@{attack}!Paladin@{Paladin}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily \label{class_paladin_ae3976506b4de8c50fea8e5b005f74bad} 
+double Paladin\+::attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Метод для атаки паладином по противнику. Паладин наносит базовый урон противнику. Если паладин использует благословение, оно деактивируется после атаки и обновляются его параметры. 
+
+\begin{DoxyReturn}{Returns}
+double Урон, нанесенный противнику 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_character_ab36cd591dc5e8db548d356e5e63e9aad}{Character}}.
+
+\Hypertarget{class_paladin_a3d31d799cd0fa8ff61bb8a9092ac829b}\index{Paladin@{Paladin}!get\_class@{get\_class}}
+\index{get\_class@{get\_class}!Paladin@{Paladin}}
+\doxysubsubsection{\texorpdfstring{get\_class()}{get\_class()}}
+{\footnotesize\ttfamily \label{class_paladin_a3d31d799cd0fa8ff61bb8a9092ac829b} 
+double Paladin\+::get\+\_\+class (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Получить наименование класса. 
+
+\begin{DoxyReturn}{Returns}
+Название класса на русском 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_character_af62be9b0e99e2f7f10f296dc135f2a0f}{Character}}.
+
+\Hypertarget{class_paladin_ab0847c4ee5738a378b075391aadd185d}\index{Paladin@{Paladin}!receive\_damage@{receive\_damage}}
+\index{receive\_damage@{receive\_damage}!Paladin@{Paladin}}
+\doxysubsubsection{\texorpdfstring{receive\_damage()}{receive\_damage()}}
+{\footnotesize\ttfamily \label{class_paladin_ab0847c4ee5738a378b075391aadd185d} 
+void Paladin\+::receive\+\_\+damage (\begin{DoxyParamCaption}\item[{double}]{input\+\_\+damage}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Метод для получения урона паладином. 
+
+Этот метод уменьшает здоровье паладина в зависимости от полученного урона и его брони. Также существует шанс на снижение урона вдвое за счёт активации перка.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+damage} & Величина получаемого урона \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_character_af4ab37014bec3ab101654cf6a4ae1a05}{Character}}.
+
+\Hypertarget{class_paladin_a3ef510b94a14297bf8ab1d121d90ee8b}\index{Paladin@{Paladin}!ultimate@{ultimate}}
+\index{ultimate@{ultimate}!Paladin@{Paladin}}
+\doxysubsubsection{\texorpdfstring{ultimate()}{ultimate()}}
+{\footnotesize\ttfamily \label{class_paladin_a3ef510b94a14297bf8ab1d121d90ee8b} 
+double Paladin\+::ultimate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Метод для использования ультимативной способности паладином. Ультимативная способность паладина даёт шанс на активацию благословения, которое усиливает его характеристики. После активации ультимейта паладин наносит базовый урон противнику. 
+
+\begin{DoxyReturn}{Returns}
+double Урон, нанесенный противнику 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_character_af4ca9f12d0371ee552435145c0a26ba7}{Character}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/cpp/\+LAB5/\+Characters/\mbox{\hyperlink{paladin_8h}{paladin.\+h}}\item 
+C\+:/cpp/\+LAB5/\+Characters/paladin.\+cpp\end{DoxyCompactItemize}

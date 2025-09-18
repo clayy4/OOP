@@ -1,0 +1,10 @@
+[*]
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+
+[*.{cpp,h}]
+cpp_space_before_initializer_list_open_brace = true
+cpp_space_within_initializer_list_braces = true

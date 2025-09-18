@@ -1,0 +1,35 @@
+\doxysection{assasin.\+h}
+\hypertarget{assasin_8h_source}{}\label{assasin_8h_source}\index{C:/cpp/LAB5/Characters/assasin.h@{C:/cpp/LAB5/Characters/assasin.h}}
+\mbox{\hyperlink{assasin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ ASSASIN\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ ASSASIN\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{character_8h}{character.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_assasin_aba4a9646428c348bf5731c20e2d75b42}{Assasin}}\ :\ \textcolor{keyword}{public}\ Character\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_assasin_aba4a9646428c348bf5731c20e2d75b42}{Assasin}}(\textcolor{keyword}{const}\ std::string\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ hp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ armor,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ damage,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ perk\_chance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ultimate\_chance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dice}{Dice}}\ dice)\ :}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ Character(name,\ hp,\ armor,\ damage,\ perk\_chance,\ ultimate\_chance,\ dice)\ \{\}}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_assasin_a00c62e7d26f97e1c6bac7db39079a679}{Assasin}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ hp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ armor,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ damage,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ perk\_chance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ultimate\_chance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dice}{Dice}}\ dice)\ :}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ Character(hp,\ armor,\ damage,\ perk\_chance,\ ultimate\_chance,\ dice)\ \{\}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ std::string\ \mbox{\hyperlink{class_assasin_a5784f0ed970dac1546b47dc0d13476cc}{get\_class\_name}}()\ \ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_assasin_a922ff87b6f94be0691cb21253cae9989}{receive\_damage}}(\textcolor{keywordtype}{double}\ input\_damage)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_assasin_a05966711d51e949122a0eb0d65e2f35b}{attack}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_assasin_ac07b6f687f99aeb63f56df19018007a6}{ultimate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

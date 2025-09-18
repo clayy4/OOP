@@ -1,0 +1,29 @@
+\doxysection{dice.\+h}
+\hypertarget{dice_8h_source}{}\label{dice_8h_source}\index{C:/cpp/LAB5/library/dice.h@{C:/cpp/LAB5/library/dice.h}}
+\mbox{\hyperlink{dice_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ DICE\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ DICE\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dice_a898cd5b1af808873efac3d979645e775}{Dice}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ std::mt19937\ rand\_gen;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ std::uniform\_int\_distribution<int>\ dis;\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_dice_a898cd5b1af808873efac3d979645e775}{Dice}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_dice_a8be53f29fb647b3c4a3d04b3f4a643b8}{Dice}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ min,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ max)\ :\ rand\_gen(std::random\_device\{\}()),\ dis(min,\ max)\ \{\}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_dice_a612a16c434160895563d19099ca0b33b}{roll}}();}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DICE\_H}}
+
+\end{DoxyCode}

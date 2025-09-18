@@ -1,0 +1,34 @@
+\doxysection{vampire.\+h}
+\hypertarget{vampire_8h_source}{}\label{vampire_8h_source}\index{C:/cpp/LAB5/Characters/vampire.h@{C:/cpp/LAB5/Characters/vampire.h}}
+\mbox{\hyperlink{vampire_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ VAMPIRE\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ VAMPIRE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{character_8h}{character.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vampire_a3df982896a03a7086ba425ae614d2998}{Vampire}}\ :\ \textcolor{keyword}{public}\ Character\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_vampire_a3df982896a03a7086ba425ae614d2998}{Vampire}}(\textcolor{keyword}{const}\ std::string\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ hp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ armor,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ damage,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ perk\_chance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ultimate\_chance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dice}{Dice}}\ dice)\ :}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ Character(name,\ hp,\ armor,\ damage,\ perk\_chance,\ ultimate\_chance,\ dice)\ \{\}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_vampire_a742d7843fab436eca526359f7bf971d6}{Vampire}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ hp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ armor,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ damage,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ perk\_chance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ultimate\_chance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dice}{Dice}}\ dice)\ :}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ Character(hp,\ armor,\ damage,\ perk\_chance,\ ultimate\_chance,\ dice)\ \{\}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ std::string\ \mbox{\hyperlink{class_vampire_aef2a492827e12d11a01ecc1802686e0e}{get\_class\_name}}()\ \ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vampire_aa730c086758a61661848b07c201c7dd0}{receive\_damage}}(\textcolor{keywordtype}{double}\ input\_damage)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_vampire_a6c26ff4c72d14c2ec8d97eda5078fa34}{attack}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_vampire_a7bafd5dc10c7de6e2e50db233480c670}{ultimate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

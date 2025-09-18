@@ -1,0 +1,30 @@
+\doxysection{vampire.\+h}
+\hypertarget{vampire_8h_source}{}\label{vampire_8h_source}\index{C:/cpp/LAB5/Characters/vampire.h@{C:/cpp/LAB5/Characters/vampire.h}}
+\mbox{\hyperlink{vampire_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ VAMPIRE\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ VAMPIRE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{character_8h}{character.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vampire_af88899831e7b105708920dff73636e22}{Vampire}}\ :\ \textcolor{keyword}{public}\ Character\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_vampire_af88899831e7b105708920dff73636e22}{Vampire}}(\textcolor{keyword}{const}\ std::string\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ hp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ armor,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ damage,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ perk\_chance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ ultimate\_chance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dice}{Dice}}\ dice)\ :}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ Character(name,\ hp,\ armor,\ damage,\ perk\_chance,\ ultimate\_chance,\ dice)\ \{\}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_vampire_a3caa0656ccc82452f0ac073a96ab394e}{get\_class}}()\ \ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vampire_aa730c086758a61661848b07c201c7dd0}{receive\_damage}}(\textcolor{keywordtype}{double}\ input\_damage)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_vampire_a6c26ff4c72d14c2ec8d97eda5078fa34}{attack}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_vampire_a7bafd5dc10c7de6e2e50db233480c670}{ultimate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

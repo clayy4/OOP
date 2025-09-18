@@ -1,0 +1,76 @@
+\doxysection{character.\+h}
+\hypertarget{character_8h_source}{}\label{character_8h_source}\index{C:/cpp/LAB5/Characters/character.h@{C:/cpp/LAB5/Characters/character.h}}
+\mbox{\hyperlink{character_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ CHARACTER\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ CHARACTER\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dice_8h}{../library/dice.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }Character\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ \_name;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ \_hp;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \_armor;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{double}\ \_damage;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{double}\ \_perk\_chance;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{double}\ \_ultimate\_chance;\ \ \ \ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ Character()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00037\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_dice}{Dice}}\ \mbox{\hyperlink{class_character_a45d290962bd88706ee36857b2d7474b6}{\_dice}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_a66aa7d26e2c5a0ae3bb6e303101a8343}{set\_hp}}(\textcolor{keywordtype}{double}\ new\_hp);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_ae926fc1036d7428aec9364f0eaf81d38}{set\_armor}}(\textcolor{keywordtype}{double}\ new\_armor);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_a7d757382528a32f4a705f6eff05cb8b0}{set\_damage}}(\textcolor{keywordtype}{double}\ new\_damage);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_character_a489c57501332df859f2152f88114d07a}{ARMOR\_BALANCE}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_character_a7df885690caa12d42a1d730866cfe0e3}{Character}}(\textcolor{keyword}{const}\ Character\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ Character\&\ \mbox{\hyperlink{class_character_a2b436576f41e3bc40f4478b3ae7d7f97}{operator=}}(\textcolor{keyword}{const}\ Character\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_character_a3333a88ae593c36b229c90371e935d42}{\string~Character}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00089\ \ \ \ \ Character(\textcolor{keyword}{const}\ std::string\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ hp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ armor,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ damage,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ perk\_chance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ultimate\_chance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dice}{Dice}}\&\ dice);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00101\ \ \ \ \ Character(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ hp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ armor,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ damage,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ perk\_chance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ultimate\_chance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dice}{Dice}}\&\ dice);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_character_a9e5385baeac04e3db441f20033071cc8}{is\_alive}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_character_a8afb233ba902ee776e563f4e1fa46bd0}{get\_class\_name}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_character_aed36e2c0d5587fb7800ddd1c98bf216e}{get\_hp}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \ \ \ \ std::string\ \mbox{\hyperlink{class_character_ab72b3bd9366571392ac6789f0f90dbeb}{get\_name}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_character_a162aadde35b76c318ab2b114c02792d3}{get\_damage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_character_a2e00ae2e8bc8f2e10a943c782184eef9}{get\_armor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_character_a7246cb6041253dd2ac328801154d3ec1}{get\_perk\_chance}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_character_a1584969c36411e83d4dfa006f0227785}{get\_ultimate\_chance}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_character_af4ab37014bec3ab101654cf6a4ae1a05}{receive\_damage}}(\textcolor{keywordtype}{double}\ input\_damage)\ =\ 0;}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_character_ab36cd591dc5e8db548d356e5e63e9aad}{attack}}()\ =\ 0;}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_character_af4ca9f12d0371ee552435145c0a26ba7}{ultimate}}()\ =\ 0;}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

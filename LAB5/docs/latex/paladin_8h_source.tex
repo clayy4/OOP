@@ -1,0 +1,43 @@
+\doxysection{paladin.\+h}
+\hypertarget{paladin_8h_source}{}\label{paladin_8h_source}\index{C:/cpp/LAB5/Characters/paladin.h@{C:/cpp/LAB5/Characters/paladin.h}}
+\mbox{\hyperlink{paladin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ PALADIN\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ PALADIN\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{character_8h}{character.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_paladin_acf404024aa4d9940c9b96c1c1ef0cf9e}{Paladin}}\ :\ \textcolor{keyword}{public}\ Character\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_is\_blessing\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ blessed();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paladin_acf404024aa4d9940c9b96c1c1ef0cf9e}{Paladin}}(\textcolor{keyword}{const}\ std::string\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ hp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ armor,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ damage,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ perk\_chance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ultimate\_chance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dice}{Dice}}\ dice)\ :}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ Character(name,\ hp,\ armor,\ damage,\ perk\_chance,\ ultimate\_chance,\ dice),\ \_is\_blessing(false)\ \{\}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paladin_a03bb3f1d11290a374925de760fb03166}{Paladin}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ hp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ armor,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ damage,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ perk\_chance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ultimate\_chance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dice}{Dice}}\ dice)\ :}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ Character(hp,\ armor,\ damage,\ perk\_chance,\ ultimate\_chance,\ dice),\ \_is\_blessing(false)\ \{\}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_paladin_aec22834939a4564202f777e6fed53a3b}{get\_class\_name}}()\ \ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_paladin_ab0847c4ee5738a378b075391aadd185d}{receive\_damage}}(\textcolor{keywordtype}{double}\ input\_damage)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_paladin_ae3976506b4de8c50fea8e5b005f74bad}{attack}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_paladin_a3ef510b94a14297bf8ab1d121d90ee8b}{ultimate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00105\ \ \ \ \ \};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

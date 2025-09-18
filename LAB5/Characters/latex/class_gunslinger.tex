@@ -1,0 +1,188 @@
+\doxysection{Gunslinger Class Reference}
+\hypertarget{class_gunslinger}{}\label{class_gunslinger}\index{Gunslinger@{Gunslinger}}
+
+
+Класс стрелка (\doxylink{class_gunslinger}{Gunslinger}), наследующий от \doxylink{class_character}{Character}.  
+
+
+
+
+{\ttfamily \#include $<$gunslinger.\+h$>$}
+
+Inheritance diagram for Gunslinger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_gunslinger}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gunslinger_ac87c3d2937fa7c7cc348757aa8fd3548}{Gunslinger}} (const std\+::string name, const double hp, const double armor, const double damage, const double perk\+\_\+chance, const double ultimate\+\_\+chance, const \mbox{\hyperlink{class_dice}{Dice}} dice)
+\begin{DoxyCompactList}\small\item\em Конструктор стрелка. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_gunslinger_a60f94377973e07db59ac54a196a46834}{get\+\_\+class}} () const override
+\begin{DoxyCompactList}\small\item\em Получить наименование класса. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gunslinger_a59b10764d8c6605ec0b709fa7546eee5}{receive\+\_\+damage}} (double input\+\_\+damage) override
+\begin{DoxyCompactList}\small\item\em Метод для получения урона стрелком. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_gunslinger_a690bca70ae41cdd8ec1e42c6c2d30e00}{attack}} () override
+\begin{DoxyCompactList}\small\item\em Метод для атаки стрелка по противнику. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_gunslinger_a9f12f70266789221d34afa1b932ddd6e}{ultimate}} () override
+\begin{DoxyCompactList}\small\item\em Метод для использования ультимативной способности стрелка. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_character}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Character} (const \mbox{\hyperlink{class_character}{Character}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Удалённый конструктор копирования. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_character}{Character}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_character}{Character}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Удалённый оператор присваивания. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Character} ()=default
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_character_a3b2207476b51204674b9cce4721ca280}{Character}} (const std\+::string name, const double hp, const double armor, const double damage, const double perk\+\_\+chance, const double ultimate\+\_\+chance, const \mbox{\hyperlink{class_dice}{Dice}} dice)
+\begin{DoxyCompactList}\small\item\em Конструктор с параметрами. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_character_a9e5385baeac04e3db441f20033071cc8}{is\+\_\+alive}} ()
+\begin{DoxyCompactList}\small\item\em Проверка, жив ли персонаж. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_character_aed36e2c0d5587fb7800ddd1c98bf216e}{get\+\_\+hp}} () const
+\begin{DoxyCompactList}\small\item\em Получить текущее здоровье персонажа. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_character_ab72b3bd9366571392ac6789f0f90dbeb}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Получить имя персонажа. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_character_a162aadde35b76c318ab2b114c02792d3}{get\+\_\+damage}} () const
+\begin{DoxyCompactList}\small\item\em Получить урон персонажа. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_character_a2e00ae2e8bc8f2e10a943c782184eef9}{get\+\_\+armor}} () const
+\begin{DoxyCompactList}\small\item\em Получить значение брони. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_character_a3ebd1ced348eb83792e1355690d6f19c}{get\+\_\+perk\+\_\+chance}} () const
+\begin{DoxyCompactList}\small\item\em Получить шанс срабатывания перка. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_character_ad411caefc9b85ba23e6bb2cb2ff5a7be}{get\+\_\+ultimate\+\_\+chance}} () const
+\begin{DoxyCompactList}\small\item\em Получить шанс ультимативной способности. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_character}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+\_\+hp} (double new\+\_\+hp)
+\begin{DoxyCompactList}\small\item\em Установить значение здоровья \end{DoxyCompactList}\item 
+void {\bfseries set\+\_\+armor} (double new\+\_\+armor)
+\begin{DoxyCompactList}\small\item\em Установить значение брони \end{DoxyCompactList}\item 
+void {\bfseries set\+\_\+damage} (double new\+\_\+damage)
+\begin{DoxyCompactList}\small\item\em Установить значение урона \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_character}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dice}{Dice}} {\bfseries \+\_\+dice}
+\begin{DoxyCompactList}\small\item\em Кубик для вероятностных действий \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс стрелка (\doxylink{class_gunslinger}{Gunslinger}), наследующий от \doxylink{class_character}{Character}. 
+
+Класс стрелка включает в себя методы для получения урона, атаки, использования ультимативной способности, а также уникальные перки, такие как увеличение урона с шансом и восстановление здоровья при атаке. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_gunslinger_ac87c3d2937fa7c7cc348757aa8fd3548}\index{Gunslinger@{Gunslinger}!Gunslinger@{Gunslinger}}
+\index{Gunslinger@{Gunslinger}!Gunslinger@{Gunslinger}}
+\doxysubsubsection{\texorpdfstring{Gunslinger()}{Gunslinger()}}
+{\footnotesize\ttfamily \label{class_gunslinger_ac87c3d2937fa7c7cc348757aa8fd3548} 
+Gunslinger\+::\+Gunslinger (\begin{DoxyParamCaption}\item[{const std\+::string}]{name}{, }\item[{const double}]{hp}{, }\item[{const double}]{armor}{, }\item[{const double}]{damage}{, }\item[{const double}]{perk\+\_\+chance}{, }\item[{const double}]{ultimate\+\_\+chance}{, }\item[{const \mbox{\hyperlink{class_dice}{Dice}}}]{dice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор стрелка. 
+
+Создаёт объект стрелка с заданными параметрами.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Имя стрелка \\
+\hline
+{\em hp} & Здоровье стрелка \\
+\hline
+{\em armor} & Броня стрелка \\
+\hline
+{\em damage} & Базовый урон стрелка \\
+\hline
+{\em perk\+\_\+chance} & Шанс на активацию перка \\
+\hline
+{\em ultimate\+\_\+chance} & Шанс на активацию ультимативной способности \\
+\hline
+{\em dice} & Кубик для расчета вероятностей \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_gunslinger_a690bca70ae41cdd8ec1e42c6c2d30e00}\index{Gunslinger@{Gunslinger}!attack@{attack}}
+\index{attack@{attack}!Gunslinger@{Gunslinger}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily \label{class_gunslinger_a690bca70ae41cdd8ec1e42c6c2d30e00} 
+double Gunslinger\+::attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Метод для атаки стрелка по противнику. 
+
+Стрелок наносит базовый урон противнику. Если активирован перк, урон увеличивается в 2.\+5 раза, а стрелок восстанавливает 50 единиц здоровья. \begin{DoxyReturn}{Returns}
+double Урон, нанесенный противнику 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_character_ab36cd591dc5e8db548d356e5e63e9aad}{Character}}.
+
+\Hypertarget{class_gunslinger_a60f94377973e07db59ac54a196a46834}\index{Gunslinger@{Gunslinger}!get\_class@{get\_class}}
+\index{get\_class@{get\_class}!Gunslinger@{Gunslinger}}
+\doxysubsubsection{\texorpdfstring{get\_class()}{get\_class()}}
+{\footnotesize\ttfamily \label{class_gunslinger_a60f94377973e07db59ac54a196a46834} 
+double Gunslinger\+::get\+\_\+class (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Получить наименование класса. 
+
+\begin{DoxyReturn}{Returns}
+Название класса на русском 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_character_af62be9b0e99e2f7f10f296dc135f2a0f}{Character}}.
+
+\Hypertarget{class_gunslinger_a59b10764d8c6605ec0b709fa7546eee5}\index{Gunslinger@{Gunslinger}!receive\_damage@{receive\_damage}}
+\index{receive\_damage@{receive\_damage}!Gunslinger@{Gunslinger}}
+\doxysubsubsection{\texorpdfstring{receive\_damage()}{receive\_damage()}}
+{\footnotesize\ttfamily \label{class_gunslinger_a59b10764d8c6605ec0b709fa7546eee5} 
+void Gunslinger\+::receive\+\_\+damage (\begin{DoxyParamCaption}\item[{double}]{input\+\_\+damage}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Метод для получения урона стрелком. 
+
+Этот метод уменьшает здоровье стрелка в зависимости от полученного урона и его брони. Также существует шанс на отсутствие урона за счёт активации перка.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+damage} & Величина получаемого урона \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_character_af4ab37014bec3ab101654cf6a4ae1a05}{Character}}.
+
+\Hypertarget{class_gunslinger_a9f12f70266789221d34afa1b932ddd6e}\index{Gunslinger@{Gunslinger}!ultimate@{ultimate}}
+\index{ultimate@{ultimate}!Gunslinger@{Gunslinger}}
+\doxysubsubsection{\texorpdfstring{ultimate()}{ultimate()}}
+{\footnotesize\ttfamily \label{class_gunslinger_a9f12f70266789221d34afa1b932ddd6e} 
+double Gunslinger\+::ultimate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Метод для использования ультимативной способности стрелка. 
+
+Ультимативная способность стрелка увеличивает урон в 5 раз с шансом на активацию. \begin{DoxyReturn}{Returns}
+double Урон, нанесенный противнику 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_character_af4ca9f12d0371ee552435145c0a26ba7}{Character}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/cpp/\+LAB5/\+Characters/\mbox{\hyperlink{gunslinger_8h}{gunslinger.\+h}}\item 
+C\+:/cpp/\+LAB5/\+Characters/gunslinger.\+cpp\end{DoxyCompactItemize}

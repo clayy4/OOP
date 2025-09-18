@@ -1,0 +1,12 @@
+# ninja log v6
+30	78	7700205355372203	CHARACTERS.lib	45721b0c6ca3acff
+1085	1123	7700205365930497	GAME.lib	8f681b1cdefca830
+25	1158	7700204911241113	CMakeFiles/CHARACTERS.dir/Characters/character.cpp.obj	f685793e8305d658
+47	1193	7700204911450016	CMakeFiles/CHARACTERS.dir/Characters/paladin.cpp.obj	579c470ed8dc2afb
+50	1165	7700204911481955	CMakeFiles/GAME.dir/library/dice.cpp.obj	ce404b2fad7fc162
+29	1210	7700204911278444	CMakeFiles/CHARACTERS.dir/Characters/vampire.cpp.obj	f5c5eb16e9725a70
+42	1169	7700204911409359	CMakeFiles/CHARACTERS.dir/Characters/gunslinger.cpp.obj	9832d4a3226f1dc1
+37	1214	7700204911360391	CMakeFiles/CHARACTERS.dir/Characters/assasin.cpp.obj	91f7d2383dc6e358
+37	878	7700205355448038	CMakeFiles/lab5.dir/main.cpp.obj	82afada00629be4c
+26	1085	7700205355331067	CMakeFiles/GAME.dir/library/game.cpp.obj	4e5f880de07c4b4
+1123	1315	7700205366306654	lab5.exe	ccab585ebc61dcd7

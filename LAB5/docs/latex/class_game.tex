@@ -1,0 +1,195 @@
+\doxysection{Game Class Reference}
+\hypertarget{class_game}{}\label{class_game}\index{Game@{Game}}
+
+
+Класс игры  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65} 
+{\bfseries Game} ()
+\begin{DoxyCompactList}\small\item\em Конструктор игры c расчетом вероятностей от 0 до 100. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dice}{Dice}} \& \mbox{\hyperlink{class_game_a01ce03b389f146e0ce27b6e84577c06b}{get\+\_\+dice}} ()
+\begin{DoxyCompactList}\small\item\em Метод для получения оригинального кубика \end{DoxyCompactList}\item 
+\Hypertarget{class_game_a82c384a06d85f81376bb4febbb583817}\label{class_game_a82c384a06d85f81376bb4febbb583817} 
+void {\bfseries add\+\_\+character} (\mbox{\hyperlink{struct_wrap_character}{Wrap\+Character}} wrcharacter)
+\begin{DoxyCompactList}\small\item\em Добавляет в вектор персонажей новый класс \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a9b5e63f0442225aa69d205f1e3130858}{add\+\_\+menu\+\_\+item}} (const std\+::string \&item)
+\begin{DoxyCompactList}\small\item\em Добавляет пункт в главное меню программы. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_ad9328d7b6c26b1b2f9f7bc6252ccfd7e}\label{class_game_ad9328d7b6c26b1b2f9f7bc6252ccfd7e} 
+void {\bfseries print\+\_\+menu} () noexcept
+\begin{DoxyCompactList}\small\item\em Отображает главное меню программы. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a2b84f35b6e26012536aa221777937938}{add\+\_\+info\+\_\+item}} (const std\+::string \&item)
+\begin{DoxyCompactList}\small\item\em Добавляет пункт в главное меню программы. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_af102a22de7be0a2b1de8d4120f863899}\label{class_game_af102a22de7be0a2b1de8d4120f863899} 
+void {\bfseries print\+\_\+info} () noexcept
+\begin{DoxyCompactList}\small\item\em Выводит информацию об игре. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \mbox{\hyperlink{class_game_ae3970017b663e8ab196a48ec8fb62f9b}{create\+\_\+character}} (const int choose, const std\+::string name)
+\begin{DoxyCompactList}\small\item\em Создаёт персонажа по заданному типу и имени. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_aa2df9aeba3f9ac06019f17fb8a916301}\label{class_game_aa2df9aeba3f9ac06019f17fb8a916301} 
+void {\bfseries settings} ()
+\begin{DoxyCompactList}\small\item\em Настройки игры\+: имена и классы персонажей. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a38a3ca94038b719602570253ef5b9228}{random\+\_\+settings}} (const std\+::vector$<$ std\+::string $>$ \&vec\+\_\+names)
+\begin{DoxyCompactList}\small\item\em Создает случайные настройки игры\+: имена и классы персонажей. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a5d7985ac95daa81983e7b897bf7b68b1}{act}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ attacker, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ defender)
+\begin{DoxyCompactList}\small\item\em Выполняет действие одного персонажа над другим с использованием случайного фактора. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_af9e3f4b90c2ea571cdf07607d2d99e46}{statistic}} (const int move)
+\begin{DoxyCompactList}\small\item\em Отображает текущую статистику боя. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_a206ed958e87781aae2ae47d5fad6e6f2}{simulation}} ()
+\begin{DoxyCompactList}\small\item\em Запускает симуляцию сражения между двумя персонажами. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_aabe260b13403493f6f76d1d1fcb3e623}{run}} (const std\+::vector$<$ std\+::string $>$ \&vec\+\_\+names)
+\begin{DoxyCompactList}\small\item\em Запускает игру. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс игры 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_a5d7985ac95daa81983e7b897bf7b68b1}\index{Game@{Game}!act@{act}}
+\index{act@{act}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{act()}{act()}}
+{\footnotesize\ttfamily \label{class_game_a5d7985ac95daa81983e7b897bf7b68b1} 
+void Game\+::act (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$}]{attacker}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$}]{defender}{}\end{DoxyParamCaption})}
+
+
+
+Выполняет действие одного персонажа над другим с использованием случайного фактора. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attacker} & \\
+\hline
+{\em defender} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_a2b84f35b6e26012536aa221777937938}\index{Game@{Game}!add\_info\_item@{add\_info\_item}}
+\index{add\_info\_item@{add\_info\_item}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{add\_info\_item()}{add\_info\_item()}}
+{\footnotesize\ttfamily \label{class_game_a2b84f35b6e26012536aa221777937938} 
+void Game\+::add\+\_\+info\+\_\+item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Добавляет пункт в главное меню программы. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Пункт меню информацииы \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_a9b5e63f0442225aa69d205f1e3130858}\index{Game@{Game}!add\_menu\_item@{add\_menu\_item}}
+\index{add\_menu\_item@{add\_menu\_item}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{add\_menu\_item()}{add\_menu\_item()}}
+{\footnotesize\ttfamily \label{class_game_a9b5e63f0442225aa69d205f1e3130858} 
+void Game\+::add\+\_\+menu\+\_\+item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Добавляет пункт в главное меню программы. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Пункт меню \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_ae3970017b663e8ab196a48ec8fb62f9b}\index{Game@{Game}!create\_character@{create\_character}}
+\index{create\_character@{create\_character}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{create\_character()}{create\_character()}}
+{\footnotesize\ttfamily \label{class_game_ae3970017b663e8ab196a48ec8fb62f9b} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ Game\+::create\+\_\+character (\begin{DoxyParamCaption}\item[{const int}]{choose}{, }\item[{const std\+::string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт персонажа по заданному типу и имени. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choose} & Номер выбранного класса персонажа \\
+\hline
+{\em name} & Имя персонажа \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Изменяет персонажей заданных в полях 
+\end{DoxyReturn}
+\Hypertarget{class_game_a01ce03b389f146e0ce27b6e84577c06b}\index{Game@{Game}!get\_dice@{get\_dice}}
+\index{get\_dice@{get\_dice}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{get\_dice()}{get\_dice()}}
+{\footnotesize\ttfamily \label{class_game_a01ce03b389f146e0ce27b6e84577c06b} 
+\mbox{\hyperlink{class_dice}{Dice}} \& Game\+::get\+\_\+dice (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Метод для получения оригинального кубика 
+
+\begin{DoxyReturn}{Returns}
+Возвращает кубик из поля игры 
+\end{DoxyReturn}
+\Hypertarget{class_game_a38a3ca94038b719602570253ef5b9228}\index{Game@{Game}!random\_settings@{random\_settings}}
+\index{random\_settings@{random\_settings}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{random\_settings()}{random\_settings()}}
+{\footnotesize\ttfamily \label{class_game_a38a3ca94038b719602570253ef5b9228} 
+void Game\+::random\+\_\+settings (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{vec\+\_\+names}{}\end{DoxyParamCaption})}
+
+
+
+Создает случайные настройки игры\+: имена и классы персонажей. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec\+\_\+names} & Вектор имен для героев \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_aabe260b13403493f6f76d1d1fcb3e623}\index{Game@{Game}!run@{run}}
+\index{run@{run}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_game_aabe260b13403493f6f76d1d1fcb3e623} 
+int Game\+::run (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{vec\+\_\+names}{}\end{DoxyParamCaption})}
+
+
+
+Запускает игру. 
+
+\begin{DoxyReturn}{Returns}
+Возвращает код выполнения программы 
+\end{DoxyReturn}
+\Hypertarget{class_game_a206ed958e87781aae2ae47d5fad6e6f2}\index{Game@{Game}!simulation@{simulation}}
+\index{simulation@{simulation}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{simulation()}{simulation()}}
+{\footnotesize\ttfamily \label{class_game_a206ed958e87781aae2ae47d5fad6e6f2} 
+std\+::string Game\+::simulation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Запускает симуляцию сражения между двумя персонажами. 
+
+\begin{DoxyReturn}{Returns}
+Имя победителя 
+\end{DoxyReturn}
+\Hypertarget{class_game_af9e3f4b90c2ea571cdf07607d2d99e46}\index{Game@{Game}!statistic@{statistic}}
+\index{statistic@{statistic}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{statistic()}{statistic()}}
+{\footnotesize\ttfamily \label{class_game_af9e3f4b90c2ea571cdf07607d2d99e46} 
+void Game\+::statistic (\begin{DoxyParamCaption}\item[{const int}]{move}{}\end{DoxyParamCaption})}
+
+
+
+Отображает текущую статистику боя. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Номер текущего хода \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/cpp/\+LAB5/library/\mbox{\hyperlink{game_8h}{game.\+h}}\item 
+C\+:/cpp/\+LAB5/library/game.\+cpp\end{DoxyCompactItemize}

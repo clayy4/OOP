@@ -1,0 +1,46 @@
+\doxysection{game.\+h}
+\hypertarget{game_8h_source}{}\label{game_8h_source}\index{C:/cpp/LAB5/library/game.h@{C:/cpp/LAB5/library/game.h}}
+\mbox{\hyperlink{game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ GAME\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ GAME\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{character_8h}{../Characters/character.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{assasin_8h}{../Characters/assasin.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{paladin_8h}{../Characters/paladin.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gunslinger_8h}{../Characters/gunslinger.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vampire_8h}{../Characters/vampire.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dice_8h}{dice.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <format>}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game_8h_aea1164937f39c1a53bcc77fb820cfcbb}{correct\_input}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MIN,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MAX);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_ae2e1fa811324b1a42b0252b0523b2eb5}{print\_menu}}()\ noexcept;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ game\_info()\ noexcept;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ game\_settings(std::pair<\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}>\&\ heroes,\ std::pair<std::\textcolor{keywordtype}{string},\ std::\textcolor{keywordtype}{string}>\&\ names,\ std::vector<std::\textcolor{keywordtype}{string}>\&\ vec\_names);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ random\_settings(std::pair<\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}>\&\ heroes,\ std::pair<std::\textcolor{keywordtype}{string},\ std::\textcolor{keywordtype}{string}>\&\ names,\ const\ std::vector<std::\textcolor{keywordtype}{string}>\&\ vec\_names);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ act(std::shared\_ptr<\mbox{\hyperlink{class_character}{Character}}>\&\ attacker,\ std::shared\_ptr<\mbox{\hyperlink{class_character}{Character}}>\&\ defender,\ \mbox{\hyperlink{class_dice}{Dice}}\&\ dice);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ std::\textcolor{keywordtype}{string}\ \mbox{\hyperlink{game_8h_ad1978488d0bb78b7c817f39650741591}{hero\_class}}(const\ std::shared\_ptr<\mbox{\hyperlink{class_character}{Character}}>\&\ hero);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ std::\textcolor{keywordtype}{string}\ \mbox{\hyperlink{game_8h_ad1978488d0bb78b7c817f39650741591}{hero\_class}}(const\ \textcolor{keywordtype}{int}\ hero);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{void}\ statistic(const\ std::shared\_ptr<\mbox{\hyperlink{class_character}{Character}}>\&\ character1,\ const\ std::shared\_ptr<\mbox{\hyperlink{class_character}{Character}}>\&\ character2,\ const\ \textcolor{keywordtype}{int}\ move);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00096\ std::shared\_ptr<\mbox{\hyperlink{class_character}{Character}}>\ create\_character(const\ \textcolor{keywordtype}{int}\ choose,\ const\ std::\textcolor{keywordtype}{string}\ name,\ \mbox{\hyperlink{class_dice}{Dice}}\&\ dice);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00105\ std::\textcolor{keywordtype}{string}\ game\_simulation(const\ std::pair<std::\textcolor{keywordtype}{string},\ std::\textcolor{keywordtype}{string}>\ names,\ const\ std::pair<\textcolor{keywordtype}{int},\ \textcolor{keywordtype}{int}>\ heroe,\ \mbox{\hyperlink{class_dice}{Dice}}\&\ dice);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

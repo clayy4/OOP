@@ -1,0 +1,236 @@
+\doxysection{C\+:/cpp/\+LAB5/library/game.h File Reference}
+\hypertarget{game_8h}{}\label{game_8h}\index{C:/cpp/LAB5/library/game.h@{C:/cpp/LAB5/library/game.h}}
+
+
+Файл, содержащий основные логические функции игры  
+
+
+{\ttfamily \#include "{}../\+Characters/character.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Characters/assasin.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Characters/paladin.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Characters/gunslinger.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Characters/vampire.\+h"{}}\newline
+{\ttfamily \#include "{}dice.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$format$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{game_8h_aea1164937f39c1a53bcc77fb820cfcbb}{correct\+\_\+input}} (const int MIN, const int MAX)
+\begin{DoxyCompactList}\small\item\em Запрашивает у пользователя корректное целочисленное значение в диапазоне от MIN до MAX. \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_ae2e1fa811324b1a42b0252b0523b2eb5}\label{game_8h_ae2e1fa811324b1a42b0252b0523b2eb5} 
+void {\bfseries print\+\_\+menu} () noexcept
+\begin{DoxyCompactList}\small\item\em Отображает главное меню программы. \end{DoxyCompactList}\item 
+\Hypertarget{game_8h_ab1816edd79809f827c88092b92a0a4ed}\label{game_8h_ab1816edd79809f827c88092b92a0a4ed} 
+void {\bfseries game\+\_\+info} () noexcept
+\begin{DoxyCompactList}\small\item\em Выводит информацию об игре. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a8e7b73aef19528095414351f12287c37}{game\+\_\+settings}} (std\+::pair$<$ int, int $>$ \&heroes, std\+::pair$<$ std\+::string, std\+::string $>$ \&names, std\+::vector$<$ std\+::string $>$ \&vec\+\_\+names)
+\begin{DoxyCompactList}\small\item\em Запрашивает у пользователя настройки игры\+: имена и классы персонажей. Новые имена доавбляются в вектор имен \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a1a1077ea2c3adfbb38cf02f582b15ff4}{random\+\_\+settings}} (std\+::pair$<$ int, int $>$ \&heroes, std\+::pair$<$ std\+::string, std\+::string $>$ \&names, const std\+::vector$<$ std\+::string $>$ \&vec\+\_\+names)
+\begin{DoxyCompactList}\small\item\em Создает случайные настройки игры\+: имена и классы персонажей. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a6678dae653c873650945916c194aa444}{act}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \&attacker, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \&defender, \mbox{\hyperlink{class_dice}{Dice}} \&dice)
+\begin{DoxyCompactList}\small\item\em Выполняет действие одного персонажа над другим с использованием случайного фактора. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{game_8h_ad1978488d0bb78b7c817f39650741591}{hero\+\_\+class}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \&hero)
+\begin{DoxyCompactList}\small\item\em Сравнивает классы и находит нужный \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{game_8h_a4d62dc26cdf36df70f5c3452a63b68fd}{hero\+\_\+class}} (const int hero)
+\begin{DoxyCompactList}\small\item\em Сравнивает цифру присвоенные к классам и находит нужный \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a5522512885e2ac4f032765e3b427d60a}{statistic}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \&character1, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \&character2, const int move)
+\begin{DoxyCompactList}\small\item\em Отображает текущую статистику боя. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \mbox{\hyperlink{game_8h_ae489dd4ce70e8b14704e59b1e4c1b6c7}{create\+\_\+character}} (const int choose, const std\+::string name, \mbox{\hyperlink{class_dice}{Dice}} \&dice)
+\begin{DoxyCompactList}\small\item\em Создаёт персонажа по заданному типу и имени. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{game_8h_a187090716276351d8138fe589751a56f}{game\+\_\+simulation}} (const std\+::pair$<$ std\+::string, std\+::string $>$ names, const std\+::pair$<$ int, int $>$ heroe, \mbox{\hyperlink{class_dice}{Dice}} \&dice)
+\begin{DoxyCompactList}\small\item\em Запускает симуляцию сражения между двумя персонажами. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Файл, содержащий основные логические функции игры 
+
+Включает функции отображения меню, настройки и симуляции игры, а также взаимодействия между персонажами. \begin{DoxyAuthor}{Author}
+clay 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26.\+04.\+2025 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+© clay, 2025. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game_8h_a6678dae653c873650945916c194aa444}\index{game.h@{game.h}!act@{act}}
+\index{act@{act}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{act()}{act()}}
+{\footnotesize\ttfamily \label{game_8h_a6678dae653c873650945916c194aa444} 
+void act (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \&}]{attacker}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \&}]{defender}{, }\item[{\mbox{\hyperlink{class_dice}{Dice}} \&}]{dice}{}\end{DoxyParamCaption})}
+
+
+
+Выполняет действие одного персонажа над другим с использованием случайного фактора. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attacker} & Указатель на атакующего персонажа \\
+\hline
+{\em defender} & Указатель на защищающегося персонажа \\
+\hline
+{\em dice} & Кубик для расчета вероятностных событий \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8h_aea1164937f39c1a53bcc77fb820cfcbb}\index{game.h@{game.h}!correct\_input@{correct\_input}}
+\index{correct\_input@{correct\_input}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{correct\_input()}{correct\_input()}}
+{\footnotesize\ttfamily \label{game_8h_aea1164937f39c1a53bcc77fb820cfcbb} 
+int correct\+\_\+input (\begin{DoxyParamCaption}\item[{const int}]{MIN}{, }\item[{const int}]{MAX}{}\end{DoxyParamCaption})}
+
+
+
+Запрашивает у пользователя корректное целочисленное значение в диапазоне от MIN до MAX. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em MIN} & Минимально допустимое значение \\
+\hline
+{\em MAX} & Максимально допустимое значение \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Корректное значение в указанном диапазоне 
+\end{DoxyReturn}
+\Hypertarget{game_8h_ae489dd4ce70e8b14704e59b1e4c1b6c7}\index{game.h@{game.h}!create\_character@{create\_character}}
+\index{create\_character@{create\_character}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{create\_character()}{create\_character()}}
+{\footnotesize\ttfamily \label{game_8h_ae489dd4ce70e8b14704e59b1e4c1b6c7} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ create\+\_\+character (\begin{DoxyParamCaption}\item[{const int}]{choose}{, }\item[{const std\+::string}]{name}{, }\item[{\mbox{\hyperlink{class_dice}{Dice}} \&}]{dice}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт персонажа по заданному типу и имени. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choose} & Номер выбранного класса персонажа \\
+\hline
+{\em name} & Имя персонажа \\
+\hline
+{\em dice} & Кубик для расчета вероятностных событий \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Уникальный указатель на созданного персонажа 
+\end{DoxyReturn}
+\Hypertarget{game_8h_a8e7b73aef19528095414351f12287c37}\index{game.h@{game.h}!game\_settings@{game\_settings}}
+\index{game\_settings@{game\_settings}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_settings()}{game\_settings()}}
+{\footnotesize\ttfamily \label{game_8h_a8e7b73aef19528095414351f12287c37} 
+void game\+\_\+settings (\begin{DoxyParamCaption}\item[{std\+::pair$<$ int, int $>$ \&}]{heroes}{, }\item[{std\+::pair$<$ std\+::string, std\+::string $>$ \&}]{names}{, }\item[{std\+::vector$<$ std\+::string $>$ \&}]{vec\+\_\+names}{}\end{DoxyParamCaption})}
+
+
+
+Запрашивает у пользователя настройки игры\+: имена и классы персонажей. Новые имена доавбляются в вектор имен 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heroes} & Пара с номерами классов героев \\
+\hline
+{\em names} & Пара с именами героев \\
+\hline
+{\em vec\+\_\+names} & Вектор имен для героев \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8h_a187090716276351d8138fe589751a56f}\index{game.h@{game.h}!game\_simulation@{game\_simulation}}
+\index{game\_simulation@{game\_simulation}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_simulation()}{game\_simulation()}}
+{\footnotesize\ttfamily \label{game_8h_a187090716276351d8138fe589751a56f} 
+std\+::string game\+\_\+simulation (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ std\+::string, std\+::string $>$}]{names}{, }\item[{const std\+::pair$<$ int, int $>$}]{heroe}{, }\item[{\mbox{\hyperlink{class_dice}{Dice}} \&}]{dice}{}\end{DoxyParamCaption})}
+
+
+
+Запускает симуляцию сражения между двумя персонажами. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em names} & Пара имён персонажей \\
+\hline
+{\em heroe} & Пара номеров классов героев \\
+\hline
+{\em dice} & Кубик для расчета вероятностных событий \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Имя победителя 
+\end{DoxyReturn}
+\Hypertarget{game_8h_a4d62dc26cdf36df70f5c3452a63b68fd}\index{game.h@{game.h}!hero\_class@{hero\_class}}
+\index{hero\_class@{hero\_class}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{hero\_class()}{hero\_class()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{game_8h_a4d62dc26cdf36df70f5c3452a63b68fd} 
+std\+::string hero\+\_\+class (\begin{DoxyParamCaption}\item[{const int}]{hero}{}\end{DoxyParamCaption})}
+
+
+
+Сравнивает цифру присвоенные к классам и находит нужный 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hero} & Цифра присвоенная к классу персонажа \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Строку с наименованием класса 
+\end{DoxyReturn}
+\Hypertarget{game_8h_ad1978488d0bb78b7c817f39650741591}\index{game.h@{game.h}!hero\_class@{hero\_class}}
+\index{hero\_class@{hero\_class}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{hero\_class()}{hero\_class()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{game_8h_ad1978488d0bb78b7c817f39650741591} 
+std\+::string hero\+\_\+class (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \&}]{hero}{}\end{DoxyParamCaption})}
+
+
+
+Сравнивает классы и находит нужный 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hero} & Указатель на персонажа \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Строку с наименованием класса 
+\end{DoxyReturn}
+\Hypertarget{game_8h_a1a1077ea2c3adfbb38cf02f582b15ff4}\index{game.h@{game.h}!random\_settings@{random\_settings}}
+\index{random\_settings@{random\_settings}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{random\_settings()}{random\_settings()}}
+{\footnotesize\ttfamily \label{game_8h_a1a1077ea2c3adfbb38cf02f582b15ff4} 
+void random\+\_\+settings (\begin{DoxyParamCaption}\item[{std\+::pair$<$ int, int $>$ \&}]{heroes}{, }\item[{std\+::pair$<$ std\+::string, std\+::string $>$ \&}]{names}{, }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{vec\+\_\+names}{}\end{DoxyParamCaption})}
+
+
+
+Создает случайные настройки игры\+: имена и классы персонажей. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em heroes} & Пара с номерами классов героев \\
+\hline
+{\em names} & Пара с именами героев \\
+\hline
+{\em vec\+\_\+names} & Вектор имен для героев \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8h_a5522512885e2ac4f032765e3b427d60a}\index{game.h@{game.h}!statistic@{statistic}}
+\index{statistic@{statistic}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{statistic()}{statistic()}}
+{\footnotesize\ttfamily \label{game_8h_a5522512885e2ac4f032765e3b427d60a} 
+void statistic (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \&}]{character1}{, }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_character}{Character}} $>$ \&}]{character2}{, }\item[{const int}]{move}{}\end{DoxyParamCaption})}
+
+
+
+Отображает текущую статистику боя. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character1} & Первый персонаж \\
+\hline
+{\em character2} & Второй персонаж \\
+\hline
+{\em move} & Номер текущего хода \\
+\hline
+\end{DoxyParams}

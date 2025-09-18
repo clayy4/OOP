@@ -1,0 +1,66 @@
+\doxysection{C\+:/cpp/\+LAB5/library/game.h File Reference}
+\hypertarget{game_8h}{}\label{game_8h}\index{C:/cpp/LAB5/library/game.h@{C:/cpp/LAB5/library/game.h}}
+
+
+Файл, содержащий основные логические функции игры  
+
+
+{\ttfamily \#include "{}../\+Characters/character.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Characters/assasin.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Characters/paladin.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Characters/gunslinger.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Characters/vampire.\+h"{}}\newline
+{\ttfamily \#include "{}dice.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$format$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_wrap_character}{Wrap\+Character}}
+\begin{DoxyCompactList}\small\item\em Обертка над классом \doxylink{class_character}{Character} для хранения данных \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_game}{Game}}
+\begin{DoxyCompactList}\small\item\em Класс игры \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{game_8h_aea1164937f39c1a53bcc77fb820cfcbb}{correct\+\_\+input}} (const int MIN, const int MAX)
+\begin{DoxyCompactList}\small\item\em Запрашивает у пользователя корректное целочисленное значение в диапазоне от MIN до MAX. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Файл, содержащий основные логические функции игры 
+
+Включает функции отображения меню, настройки и симуляции игры, а также взаимодействия между персонажами. \begin{DoxyAuthor}{Author}
+clay 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26.\+04.\+2025 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+© clay, 2025. All rights reserved. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game_8h_aea1164937f39c1a53bcc77fb820cfcbb}\index{game.h@{game.h}!correct\_input@{correct\_input}}
+\index{correct\_input@{correct\_input}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{correct\_input()}{correct\_input()}}
+{\footnotesize\ttfamily \label{game_8h_aea1164937f39c1a53bcc77fb820cfcbb} 
+int correct\+\_\+input (\begin{DoxyParamCaption}\item[{const int}]{MIN}{, }\item[{const int}]{MAX}{}\end{DoxyParamCaption})}
+
+
+
+Запрашивает у пользователя корректное целочисленное значение в диапазоне от MIN до MAX. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em MIN} & Минимально допустимое значение \\
+\hline
+{\em MAX} & Максимально допустимое значение \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Корректное значение в указанном диапазоне 
+\end{DoxyReturn}

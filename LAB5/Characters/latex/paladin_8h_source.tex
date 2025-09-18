@@ -1,0 +1,39 @@
+\doxysection{paladin.\+h}
+\hypertarget{paladin_8h_source}{}\label{paladin_8h_source}\index{C:/cpp/LAB5/Characters/paladin.h@{C:/cpp/LAB5/Characters/paladin.h}}
+\mbox{\hyperlink{paladin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ PALADIN\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ PALADIN\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{character_8h}{character.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_paladin_a2427c8fbde4ad9560d50c26a3dc6169a}{Paladin}}\ :\ \textcolor{keyword}{public}\ Character\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_is\_blessing\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ blessed();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_paladin_a2427c8fbde4ad9560d50c26a3dc6169a}{Paladin}}(\textcolor{keyword}{const}\ std::string\ name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ hp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ armor,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ damage,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ perk\_chance,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ ultimate\_chance,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_dice}{Dice}}\ dice)\ :}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ Character(name,\ hp,\ armor,\ damage,\ perk\_chance,\ ultimate\_chance,\ dice),\ \_is\_blessing(false)\ \{\}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_paladin_a3d31d799cd0fa8ff61bb8a9092ac829b}{get\_class}}()\ \ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_paladin_ab0847c4ee5738a378b075391aadd185d}{receive\_damage}}(\textcolor{keywordtype}{double}\ input\_damage)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_paladin_ae3976506b4de8c50fea8e5b005f74bad}{attack}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_paladin_a3ef510b94a14297bf8ab1d121d90ee8b}{ultimate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00089\ \ \ \ \ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}
